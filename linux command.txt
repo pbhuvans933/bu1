@@ -1,0 +1,89 @@
+page:55
+
+ head  -25 filename | tail +10
+• head  -10 filename | tail +10
+• ls -lt | head -2
+• ls -lSr | head -2
+• wc filename -l
+ . find . -mtime -3
+
+page:61
+Lines containing A
+	grep "A" file
+
+lines containing The at the beginning
+	grep ^The file
+
+lines  ending with  .	
+	grep "\.$" file
+
+lines with a,b or c as the second letter
+	grep "^.a\|b\|c" File11
+
+lines which contain def , deef or deeeef 
+	grep  "def\|deef\|deeeef" File
+
+lines not having numbers at the beginning 
+	grep -v [0-9] File
+
+empty lines
+	grep -n "^$" File
+
+list only directories
+	ls -d */ 
+page:63
+
+Create a file which contains long listing of the files in root directory
+	ls
+
+Sort the file based on the filename descending order (last field)
+	ls | sort -r
+
+Sort the file based only on the inode count
+	ls -li | sort -n
+
+Sort the file based on the user name and group name in reverse order
+	ls -lr | sort -k 3
+	ls -lr | sort -k 4
+
+Sort the file based on the file size and store the output in a file called sortedfile
+	ls -laS >sortedfile
+	cat sortedfile 
+page:66
+1. echo type date | [:lower] [:upper]
+2.sed -i 's/^[0-9].*$//g' file1
+4.cat file1 | sed 's/ //g'
+5. wc file1
+6.grep -o -i mauris file1 | wc -1 
+page:92
+Press O (To add new line)
+2. dd (removes the second line) and u (undo)
+3. :/bc 
+4. search word number by :/number and then press dw to delete word
+5. :1,2s/c/C/g
+6. :1,$s/  /\t/g 
+page:94
+1.echo "header" file1
+2.sed 2d file1, u for undo
+5.??c
+6. :cd \t
+7.yy ,p an the line 3
+8.dd
+10. :wd "bc v2" 
+
+page:118
+
+1.at now -3 minute
+2.at now +10 day
+3. "happy birthaday" | at now +1 day 
+
+page:120
+
+crontab
+* * * * * >f10
+crontab -1
+at now +1 minute
+sleep 200&
+at -1
+at -r jobno(89)
+crontab -r
