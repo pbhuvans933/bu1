@@ -1,0 +1,76 @@
+leave tracking system
+tcno    preconditions                scenarioname         Action                    test data         expected result
+tc_001  lets attendance screen     applying for leave     1.enter date             valid date         submitted successfully
+           should be visible                              2.enter reason                              
+                                                          3.click on submit
+tc_002  lets attendance screen     applying for leave     1.enter date             invalid date       submission failed
+        should be visible                                 2.enter reason                              it will ask to enter
+                                                          3.click on submit                                valid date
+tc_003  lets attendance screen     viewing the report     1.enter date             valid date         it will show viewreport
+         should be visible                                2.enter reason                                  page
+                                                          3.click on viewreport
+tc_004  lets attendance screen     viewing the report     1.enter date             invalid date         it will ask to enter
+         should be visible                                2.enter reason                                  enter valid date
+                                                          3.click on viewreport
+tc_004  lets attendance screen     clearing the details   1.enter date                                it will clear the details
+         should be visible                                2.enter reason                                  
+                                                          3.click on viewreport
+
+
+issue registration in HR connect
+tcno    preconditions                scenarioname         Action                    test data             expected result
+tc_001  HR issue registration        Hr issue            1.enter project/dept       valid extension       the issue send successfully
+        page should be visible       registration        2.enter extension           i.e it should be <4
+                                                         3.enter reporting manager
+                                                         4.enter issue
+                                                         5.click on send
+tc_002  HR issue registration        Hr issue            1.enter project/dept       invalid extension      error
+        page should be visible       registration        2.enter extension           i.e it should be >4
+                                                         3.enter reporting manager
+                                                         4.enter issue
+                                                         5.click on send
+
+
+
+requirements for request in MRBS
+tcno    preconditions                scenarioname         Action                     test data             expected result
+tc_001  MRBS page should be          submission          1.enter purpose            valid extension        submitted successfully
+         visible                     of request          2.enter group/project        i.e it should be <4
+                                                         3.enter no.of participants  valid purpose
+                                                         4.enter extension           i.e purpose length<30
+                                                         5.click on submit
+tc_002  MRBS page should be          submission          1.enter purpose            valid extension           error
+         visible                     of request          2.enter group/project        i.e it should be <4
+                                                         3.enter no.of participants  invalid purpose
+                                                         4.enter extension           i.e purpose length>30
+                                                         5.click on submit
+tc_003  MRBS page should be          submission          1.enter purpose            invalid extension          error
+         visible                     of request          2.enter group/project        i.e it should be >4
+                                                         3.enter no.of participants  valid purpose
+                                                         4.enter extension           i.e purpose length<30
+                                                         5.click on submit
+tc_004  MRBS page should be          submission          1.enter purpose            invalid extension          error
+         visible                     of request          2.enter group/project        i.e it should be >4
+                                                         3.enter no.of participants  invalid purpose
+                                                         4.enter extension           i.e purpose length>30
+                                                         5.click on submit
+tc_005  MRBS page should be           clearing the       1.enter purpose                                        clear all the details
+         visible                     details             2.enter group/project       
+                                                         3.enter no.of participants  
+                                                         4.enter extension           
+                                                         5.click on clear
+
+area of traingle
+
+tcno    preconditions                scenarioname         Action                    test data         expected result
+tc_001  Area of a traingle should    area of traingle    1.enter a,b,c values    valid a,b,c values    the program should give
+         be displayed                                                            sumof 2sides greater   area of a trainagle
+                                                                                  than third side         
+
+tc_002  Area of a traingle should    area of traingle    1.enter a,b,c values    valid a,b,c values    the program should 
+         be displayed                                                             sum of 2side less     ask to re-enter values
+                                                                                   than third side
+
+tc_003  Area of a traingle should    area of traingle     1.enter a,b,c values   invalid a,b,c values   the program should ask
+         be displayed                                                            sum of 2sides greater  to reenter values
+                                                                                    than third side
